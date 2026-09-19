@@ -44,13 +44,40 @@ export default function App() {
         <Section title="Why it made so much noise">
           <p>
             Within 24 hours, Diogo Almeida's announcement on X surpassed 4 million views
-            and stayed at the top of Hacker News for a full day. Numbers claimed by
-            TypeSafe:
+            and stayed at the top of Hacker News for a full day.{' '}
+            <strong className="text-slate-300">
+              These numbers are TypeSafe's own claims, not an independent audit:
+            </strong>
           </p>
           <StatCards />
-          <p>
+          <p className="text-sm text-slate-500">
             Training is based on a proprietary technique called RLCD (calibrated
-            decisions).
+            decisions) — described only in TypeSafe's own docs so far.
+          </p>
+        </Section>
+      </Reveal>
+
+      <Reveal>
+        <Section title="What critics are actually saying">
+          <p>
+            Not everyone is convinced this is a new AGI frontier. From the Hacker News
+            thread on the launch:
+          </p>
+          <blockquote className="border-l-2 border-cyan-400/40 pl-4 italic text-slate-400">
+            "This isn't even remotely comparable to LLMs, so why compare? [...] The video
+            is 100% marketing slop [...] I'm sure there is a niche for this, but please
+            let's not hype this as if it's the next big thing in AI."
+            <footer className="mt-1 text-xs text-slate-500 not-italic">
+              — kypro, Hacker News
+            </footer>
+          </blockquote>
+          <p>
+            On the other side, early independent testing on Reddit reported Jev
+            outperforming other solutions on public benchmarks for grading harmful
+            content — while being dramatically cheaper. So the honest read is split:
+            real efficiency gains on narrow classification tasks, real skepticism about
+            whether the "System One" framing deserves the AGI-adjacent attention it's
+            getting.
           </p>
         </Section>
       </Reveal>

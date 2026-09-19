@@ -13,9 +13,9 @@ export default function Hero() {
           Jev, Explained <span className="text-cyan-400">From Scratch</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
-          The first TypeSafe AI model that isn't an LLM: a machine for fast, structured,
-          typed decisions. What it is, how it differs, and why it made so much noise —
-          explained without assuming anything.
+          Not another rehash of TypeSafe's launch post. What Jev actually is, what its
+          own benchmarks don't prove yet, and what critics on Hacker News and Reddit are
+          pushing back on — in 3 minutes.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
