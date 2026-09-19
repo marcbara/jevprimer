@@ -13,9 +13,9 @@ export default function Hero() {
           Jev, Explained <span className="text-cyan-400">From Scratch</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
-          Not another rehash of TypeSafe's launch post. What Jev actually is, what its
-          own benchmarks don't prove yet, and what critics on Hacker News and Reddit are
-          pushing back on — in 3 minutes.
+          A technical primer on TypeSafe's viral "System One Model": how it actually
+          works, the real accuracy/cost tradeoff behind the big numbers, and who's
+          already building with it — in about 5 minutes.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a

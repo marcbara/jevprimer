@@ -2,12 +2,14 @@ export default function Unknowns() {
   return (
     <p>
       Jev doesn't reason or write code — it's a complement to "System Two" LLMs, not a
-      replacement. Every headline number (20-200x faster, 40-400x cheaper) comes from
-      TypeSafe's own benchmarks, not a third-party audit. Independent replications so
-      far are limited to a handful of narrow classification tasks (moderation, urgency
-      detection) — nobody has stress-tested RLCD on messy, ambiguous real-world state
-      yet, and it's too early to know if the calibration holds outside the demos
-      TypeSafe chose to show.
+      replacement, and it trades accuracy for speed and cost (see the tradeoff table
+      above). TypeSafe itself admits it can't yet prove its pricing is sustainable
+      rather than subsidized, and its reference benchmarks are built by its own team
+      against its own choice of comparison models. Independent, large-scale replication
+      on messy real-world data — outside TypeSafe's curated eval set — hasn't happened
+      yet. Early users on Reddit and Hacker News are genuinely split: some report it's
+      "insanely handy" for narrow classification; others aren't convinced the "System
+      One" framing is more than a fast, cheap classifier with good marketing.
     </p>
   );
 }

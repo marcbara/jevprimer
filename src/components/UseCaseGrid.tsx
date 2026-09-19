@@ -1,19 +1,19 @@
 const cases = [
   {
-    title: 'Real-time game agents',
-    body: "Dozens of agents playing \"endless runner\" style games simultaneously on a single screen, without the usual \"thinking\" pauses.",
+    title: 'Browser agents at scale',
+    body: 'Kyle Jeong (Browserbase) is powering browser-use agents for fractions of a cent per decision, using Jev for the classify/route steps instead of a full LLM call.',
   },
   {
-    title: 'Classification / triage',
-    body: 'Detecting urgency in support tickets without calling a full LLM.',
+    title: 'Live trading agent',
+    body: 'Jarrod Watts built a real-time trading agent around Jev, leaning on its ~100ms latency for decisions that need to happen inside a live market window.',
   },
   {
-    title: 'Agent routing & guardrails',
-    body: 'Integration with LangChain (langchain_typesafe), including an "Auto Mode" middleware.',
+    title: 'Email triage at scale',
+    body: "Ryan Vogel is running high-volume email triage — the kind of per-message classification that's normally too cheap to justify a frontier-model call.",
   },
   {
-    title: 'Short web tasks',
-    body: 'A task that used to take 3 minutes was completed in 7 seconds.',
+    title: 'Agent guardrails (Auto Mode)',
+    body: 'LangChain\'s AutoModeMiddleware uses Jev to screen risky tool calls (e.g. bash commands) before they execute, moving a step that used to be closed-source harness logic into the open.',
   },
 ];
 

@@ -3,6 +3,9 @@ import Hero from './components/Hero';
 import Section from './components/Section';
 import ComparisonTable from './components/ComparisonTable';
 import StatCards from './components/StatCards';
+import Primitives from './components/Primitives';
+import TradeoffTable from './components/TradeoffTable';
+import CodeSample from './components/CodeSample';
 import UseCaseGrid from './components/UseCaseGrid';
 import TryItLinks from './components/TryItLinks';
 import Unknowns from './components/Unknowns';
@@ -20,22 +23,69 @@ export default function App() {
       <Reveal>
         <Section id="what-is-jev" title="What is Jev">
           <p>
-            Jev is an AI model released on September 15, 2026 by TypeSafe AI, the startup
-            founded by Diogo Almeida (co-inventor of ChatGPT). It's not just another LLM:
-            it's the first public model in a category TypeSafe calls a "System One Model" —
-            a model built exclusively for fast, structured decisions, not for generating
-            text.
+            Jev is an AI model released on September 15, 2026 by TypeSafe AI, a startup
+            founded by Diogo Almeida (who helped build the RLHF methods behind ChatGPT
+            at OpenAI). It belongs to a new category TypeSafe calls a{' '}
+            <strong className="text-slate-300">"System One Model"</strong>: instead of
+            generating text token by token, it evaluates a situation and returns typed,
+            probabilistic answers in one parallel pass — closer to a very fast, very
+            cheap function call than to a chatbot.
+          </p>
+          <p>
+            The name is a double reference: to Kahneman's fast, intuitive "System 1"
+            thinking (as opposed to the slow, deliberate reasoning of "System 2" LLMs),
+            and to economist William Stanley Jevons — TypeSafe's bet is that, like coal
+            after the steam engine, cheaper intelligence unlocks far more use cases than
+            it replaces.
           </p>
         </Section>
       </Reveal>
 
       <Reveal>
-        <Section title="How it differs from a normal LLM">
-          <ComparisonTable />
+        <Section title="The three question types it actually answers">
           <p>
-            Jev doesn't write prose or code. It receives a "state" (a description of the
-            situation) and a set of typed questions, and responds with calibrated values
-            and probabilities.
+            Jev doesn't take open-ended prompts. Every call sends a{' '}
+            <code className="rounded bg-white/10 px-1.5 py-0.5 text-sm text-cyan-300">
+              state
+            </code>{' '}
+            (the situation, as text or structured data) plus one or more typed{' '}
+            <code className="rounded bg-white/10 px-1.5 py-0.5 text-sm text-cyan-300">
+              questions
+            </code>
+            . There are exactly three kinds:
+          </p>
+          <Primitives />
+          <p>
+            All questions in a request are evaluated in parallel against the same state —
+            adding a fourth question barely changes latency, unlike chaining more LLM
+            calls.
+          </p>
+          <CodeSample />
+        </Section>
+      </Reveal>
+
+      <Reveal>
+        <Section title="How it differs from a chat LLM">
+          <ComparisonTable />
+        </Section>
+      </Reveal>
+
+      <Reveal>
+        <Section title="The tradeoff nobody puts in the headline">
+          <p>
+            TypeSafe's own published workflow evals are the most useful number in this
+            whole launch, and it's the one most coverage skips: Jev is much faster and
+            cheaper, but it is <strong className="text-slate-300">less accurate</strong>{' '}
+            than a top-tier reasoning model on the same task. Here's TypeSafe's own
+            comparison against Claude Opus 5 on a production-style decision workflow:
+          </p>
+          <TradeoffTable />
+          <p>
+            That's the actual pitch: give up 5 accuracy points to cut cost by ~440x and
+            latency by ~94x. For a single high-stakes decision, that trade is a bad idea.
+            For scoring, routing, or triaging millions of low-stakes cases where you'd
+            never afford a frontier model anyway, it can be the difference between
+            "we can't automate this" and "we can."
           </p>
         </Section>
       </Reveal>
@@ -44,46 +94,37 @@ export default function App() {
         <Section title="Why it made so much noise">
           <p>
             Within 24 hours, Diogo Almeida's announcement on X surpassed 4 million views
-            and stayed at the top of Hacker News for a full day.{' '}
-            <strong className="text-slate-300">
-              These numbers are TypeSafe's own claims, not an independent audit:
-            </strong>
+            and stayed at the top of Hacker News for a full day. The headline claims:
           </p>
           <StatCards />
           <p className="text-sm text-slate-500">
-            Training is based on a proprietary technique called RLCD (calibrated
-            decisions) — described only in TypeSafe's own docs so far.
+            These are TypeSafe's own published benchmarks, not a third-party audit — see
+            the tradeoff above for the context that usually gets cut from the numbers.
           </p>
         </Section>
       </Reveal>
 
       <Reveal>
-        <Section title="What critics are actually saying">
+        <Section title="What's genuinely credible — and what to watch">
           <p>
-            Not everyone is convinced this is a new AGI frontier. From the Hacker News
-            thread on the launch:
+            To TypeSafe's credit, their launch post is unusually candid for a startup
+            announcement: they flag their own demo as "simplified" and shorter-input than
+            typical, note their reference model choice (GPT-6 Astra / Claude Fable 5.1)
+            biases results toward those labs, and say outright that they{' '}
+            <em>"can't prove pricing isn't subsidized"</em> — sustainability will only be
+            provable over time.
           </p>
-          <blockquote className="border-l-2 border-cyan-400/40 pl-4 italic text-slate-400">
-            "This isn't even remotely comparable to LLMs, so why compare? [...] The video
-            is 100% marketing slop [...] I'm sure there is a niche for this, but please
-            let's not hype this as if it's the next big thing in AI."
-            <footer className="mt-1 text-xs text-slate-500 not-italic">
-              — kypro, Hacker News
-            </footer>
-          </blockquote>
           <p>
-            On the other side, early independent testing on Reddit reported Jev
-            outperforming other solutions on public benchmarks for grading harmful
-            content — while being dramatically cheaper. So the honest read is split:
-            real efficiency gains on narrow classification tasks, real skepticism about
-            whether the "System One" framing deserves the AGI-adjacent attention it's
-            getting.
+            The open questions worth tracking: whether $42/billion-token pricing holds up
+            long-term, whether RLCD-trained calibration degrades on messy real-world state
+            outside the curated eval set, and whether the 255-option cardinality limit on
+            Choice questions becomes a real constraint at scale.
           </p>
         </Section>
       </Reveal>
 
       <Reveal>
-        <Section title="Real use cases already circulating">
+        <Section title="Who's actually building with it">
           <UseCaseGrid />
         </Section>
       </Reveal>
