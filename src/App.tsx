@@ -6,9 +6,11 @@ import StatCards from './components/StatCards';
 import Primitives from './components/Primitives';
 import TradeoffTable from './components/TradeoffTable';
 import CodeSample from './components/CodeSample';
+import FeaturedDemos from './components/FeaturedDemos';
+import DeveloperLearnings from './components/DeveloperLearnings';
+import ClaimsTracker from './components/ClaimsTracker';
 import UseCaseGrid from './components/UseCaseGrid';
 import TryItLinks from './components/TryItLinks';
-import Unknowns from './components/Unknowns';
 import Footer from './components/Footer';
 import Reveal from './components/Reveal';
 
@@ -50,6 +52,17 @@ export default function App() {
       </Reveal>
 
       <Reveal>
+        <Section title="Three demos that make Jev click" eyebrow="See it work">
+          <p>
+            The fastest way to understand Jev is to watch it handle tasks shaped like
+            rapid decisions, not open-ended conversation. These are three of the clearest
+            working examples found in the first week after launch.
+          </p>
+          <FeaturedDemos />
+        </Section>
+      </Reveal>
+
+      <Reveal>
         <Section title="The three question types it actually answers">
           <p>
             Jev doesn't take open-ended prompts. Every call sends a{' '}
@@ -65,10 +78,21 @@ export default function App() {
           <Primitives />
           <p>
             All questions in a request are evaluated in parallel against the same state.
-            adding a fourth question barely changes latency, unlike chaining more LLM
+            Adding a fourth question barely changes latency, unlike chaining more LLM
             calls.
           </p>
           <CodeSample />
+        </Section>
+      </Reveal>
+
+      <Reveal>
+        <Section title="Three things early developers learned" eyebrow="Field notes">
+          <p>
+            The useful lessons are not that Jev is fast. They are about where developers
+            still need to exercise judgment when they put a decision model inside real
+            software.
+          </p>
+          <DeveloperLearnings />
         </Section>
       </Reveal>
 
@@ -139,21 +163,13 @@ export default function App() {
       </Reveal>
 
       <Reveal>
-        <Section title="What's genuinely credible, and what to watch" eyebrow="Balanced view">
+        <Section title="What is proven, claimed, or still unknown" eyebrow="Claims tracker">
           <p>
-            To TypeSafe's credit, their launch post is unusually candid for a startup
-            announcement: they flag their own demo as "simplified" and shorter-input than
-            typical, note their reference model choice (GPT-6 Astra / Claude Fable 5.1)
-            biases results toward those labs, and say outright that they{' '}
-            <em>"can't prove pricing isn't subsidized."</em> Sustainability will only be
-            provable over time.
+            Jev launched with unusually large numbers. This separates properties you can
+            verify from benchmark claims and questions that only production use can
+            answer.
           </p>
-          <p>
-            The open questions worth tracking: whether $42/billion-token pricing holds up
-            long-term, whether RLCD-trained calibration degrades on messy real-world state
-            outside the curated eval set, and whether the 255-option cardinality limit on
-            Choice questions becomes a real constraint at scale.
-          </p>
+          <ClaimsTracker />
         </Section>
       </Reveal>
 
@@ -164,14 +180,8 @@ export default function App() {
       </Reveal>
 
       <Reveal>
-        <Section title="How to try it">
+        <Section title="The best places to go next" eyebrow="Keep exploring">
           <TryItLinks />
-        </Section>
-      </Reveal>
-
-      <Reveal>
-        <Section title="What we still don't know">
-          <Unknowns />
         </Section>
       </Reveal>
 
