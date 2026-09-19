@@ -23,7 +23,7 @@ const rows = [
 
 export default function ComparisonTable() {
   return (
-    <div className="overflow-hidden rounded-xl border border-white/10 bg-white/[0.03]">
+    <div className="glow-border overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-sm transition hover:border-cyan-400/20">
       <table className="w-full text-left text-sm">
         <thead>
           <tr className="border-b border-white/10 text-slate-300">

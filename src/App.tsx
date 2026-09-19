@@ -105,7 +105,7 @@ export default function App() {
       </Reveal>
 
       <Reveal>
-        <Section title="What's genuinely credible, and what to watch">
+        <Section title="What's genuinely credible, and what to watch" eyebrow="Balanced view">
           <p>
             To TypeSafe's credit, their launch post is unusually candid for a startup
             announcement: they flag their own demo as "simplified" and shorter-input than
@@ -124,7 +124,7 @@ export default function App() {
       </Reveal>
 
       <Reveal>
-        <Section title="Who's actually building with it">
+        <Section title="Who's actually building with it" eyebrow="In the wild">
           <UseCaseGrid />
         </Section>
       </Reveal>

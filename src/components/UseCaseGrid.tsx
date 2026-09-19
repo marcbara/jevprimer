@@ -23,7 +23,7 @@ export default function UseCaseGrid() {
       {cases.map((c) => (
         <div
           key={c.title}
-          className="rounded-xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-cyan-400/30"
+          className="glow-border rounded-xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_25px_rgba(34,211,238,0.12)]"
         >
           <h3 className="text-sm font-semibold text-slate-100">{c.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-slate-400">{c.body}</p>
