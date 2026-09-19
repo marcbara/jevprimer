@@ -23,9 +23,17 @@ export default function App() {
       <Reveal>
         <Section id="what-is-jev" title="What is Jev">
           <p>
-            Jev is an AI model released on September 15, 2026 by TypeSafe AI, a startup
-            founded by Diogo Almeida (who helped build the RLHF methods behind ChatGPT
-            at OpenAI). It belongs to a new category TypeSafe calls a{' '}
+            Jev is an AI model released on{' '}
+            <a
+              href="https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+              target="_blank"
+              rel="noreferrer"
+              className="link-underline text-cyan-300"
+            >
+              September 15, 2026 by TypeSafe AI
+            </a>
+            , a startup founded by Diogo Almeida (who helped build the RLHF methods
+            behind ChatGPT at OpenAI). It belongs to a new category TypeSafe calls a{' '}
             <strong className="text-slate-300">"System One Model"</strong>: instead of
             generating text token by token, it evaluates a situation and returns typed,
             probabilistic answers in one parallel pass, closer to a very fast, very
@@ -73,11 +81,20 @@ export default function App() {
       <Reveal>
         <Section title="The tradeoff nobody puts in the headline">
           <p>
-            TypeSafe's own published workflow evals are the most useful number in this
-            whole launch, and it's the one most coverage skips: Jev is much faster and
-            cheaper, but it is <strong className="text-slate-300">less accurate</strong>{' '}
-            than a top-tier reasoning model on the same task. Here's TypeSafe's own
-            comparison against Claude Opus 5 on a production-style decision workflow:
+            TypeSafe's own{' '}
+            <a
+              href="https://evals.typesafe.ai/"
+              target="_blank"
+              rel="noreferrer"
+              className="link-underline text-cyan-300"
+            >
+              published workflow evals
+            </a>{' '}
+            are the most useful number in this whole launch, and it's the one most
+            coverage skips: Jev is much faster and cheaper, but it is{' '}
+            <strong className="text-slate-300">less accurate</strong> than a top-tier
+            reasoning model on the same task. Here's TypeSafe's own comparison against
+            Claude Opus 5 on a production-style decision workflow:
           </p>
           <TradeoffTable />
           <p>
@@ -93,8 +110,25 @@ export default function App() {
       <Reveal>
         <Section title="Why it made so much noise">
           <p>
-            Within 24 hours, Diogo Almeida's announcement on X surpassed 4 million views
-            and stayed at the top of Hacker News for a full day. The headline claims:
+            Within 24 hours,{' '}
+            <a
+              href="https://x.com/CompleteSkeptic/status/2099925682726002904"
+              target="_blank"
+              rel="noreferrer"
+              className="link-underline text-cyan-300"
+            >
+              Diogo Almeida's announcement on X
+            </a>{' '}
+            surpassed 4 million views and stayed at the{' '}
+            <a
+              href="https://news.ycombinator.com/item?id=49717558"
+              target="_blank"
+              rel="noreferrer"
+              className="link-underline text-cyan-300"
+            >
+              top of Hacker News
+            </a>{' '}
+            for a full day. The headline claims:
           </p>
           <StatCards />
           <p className="text-sm text-slate-500">
