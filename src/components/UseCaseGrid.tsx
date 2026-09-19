@@ -9,7 +9,7 @@ const cases = [
   },
   {
     title: 'Email triage at scale',
-    body: "Ryan Vogel is running high-volume email triage — the kind of per-message classification that's normally too cheap to justify a frontier-model call.",
+    body: "Ryan Vogel is running high-volume email triage, the kind of per-message classification that's normally too cheap to justify a frontier-model call.",
   },
   {
     title: 'Agent guardrails (Auto Mode)',

@@ -28,13 +28,13 @@ export default function App() {
             at OpenAI). It belongs to a new category TypeSafe calls a{' '}
             <strong className="text-slate-300">"System One Model"</strong>: instead of
             generating text token by token, it evaluates a situation and returns typed,
-            probabilistic answers in one parallel pass — closer to a very fast, very
+            probabilistic answers in one parallel pass, closer to a very fast, very
             cheap function call than to a chatbot.
           </p>
           <p>
             The name is a double reference: to Kahneman's fast, intuitive "System 1"
             thinking (as opposed to the slow, deliberate reasoning of "System 2" LLMs),
-            and to economist William Stanley Jevons — TypeSafe's bet is that, like coal
+            and to economist William Stanley Jevons. TypeSafe's bet is that, like coal
             after the steam engine, cheaper intelligence unlocks far more use cases than
             it replaces.
           </p>
@@ -56,7 +56,7 @@ export default function App() {
           </p>
           <Primitives />
           <p>
-            All questions in a request are evaluated in parallel against the same state —
+            All questions in a request are evaluated in parallel against the same state.
             adding a fourth question barely changes latency, unlike chaining more LLM
             calls.
           </p>
@@ -98,20 +98,20 @@ export default function App() {
           </p>
           <StatCards />
           <p className="text-sm text-slate-500">
-            These are TypeSafe's own published benchmarks, not a third-party audit — see
+            These are TypeSafe's own published benchmarks, not a third-party audit. See
             the tradeoff above for the context that usually gets cut from the numbers.
           </p>
         </Section>
       </Reveal>
 
       <Reveal>
-        <Section title="What's genuinely credible — and what to watch">
+        <Section title="What's genuinely credible, and what to watch">
           <p>
             To TypeSafe's credit, their launch post is unusually candid for a startup
             announcement: they flag their own demo as "simplified" and shorter-input than
             typical, note their reference model choice (GPT-6 Astra / Claude Fable 5.1)
             biases results toward those labs, and say outright that they{' '}
-            <em>"can't prove pricing isn't subsidized"</em> — sustainability will only be
+            <em>"can't prove pricing isn't subsidized."</em> Sustainability will only be
             provable over time.
           </p>
           <p>

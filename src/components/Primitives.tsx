@@ -12,7 +12,7 @@ const primitives = [
   {
     name: 'Noul',
     goal: 'Is this statement true?',
-    returns: 'noul — a 0 to 1 probability',
+    returns: 'noul: a 0 to 1 probability',
   },
 ];
 

@@ -15,7 +15,7 @@ export default function Hero() {
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
           A technical primer on TypeSafe's viral "System One Model": how it actually
           works, the real accuracy/cost tradeoff behind the big numbers, and who's
-          already building with it — in about 5 minutes.
+          already building with it, in about 5 minutes.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
