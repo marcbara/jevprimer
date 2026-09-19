@@ -7,6 +7,7 @@ import Primitives from './components/Primitives';
 import TradeoffTable from './components/TradeoffTable';
 import CodeSample from './components/CodeSample';
 import FeaturedDemos from './components/FeaturedDemos';
+import WhyItChanges from './components/WhyItChanges';
 import DeveloperLearnings from './components/DeveloperLearnings';
 import ClaimsTracker from './components/ClaimsTracker';
 import UseCaseGrid from './components/UseCaseGrid';
@@ -48,6 +49,17 @@ export default function App() {
             after the steam engine, cheaper intelligence unlocks far more use cases than
             it replaces.
           </p>
+        </Section>
+      </Reveal>
+
+      <Reveal>
+        <Section title="Why people are excited, and what actually changes" eyebrow="The argument">
+          <p>
+            Speed and price are not the story by themselves. The story is that a huge
+            amount of real AI work was already decision work, and we were paying LLM
+            prices to do it.
+          </p>
+          <WhyItChanges />
         </Section>
       </Reveal>
 

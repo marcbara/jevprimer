@@ -17,11 +17,17 @@ const links = [
     description: 'The clearest practical explanation of where Jev fits inside an agent loop, with model routing and risky-tool gating examples.',
     href: 'https://www.langchain.com/blog/building-a-harness-with-jev',
   },
+  {
+    label: 'Why the architecture changes',
+    type: 'Frame',
+    description: 'Daniel Miessler’s argument for treating Jev as a decision layer: most AI work is already classification, and evals (rubrics and tournaments) are the expensive half.',
+    href: 'https://danielmiessler.com/blog/early-thoughts-on-jev',
+  },
 ];
 
 export default function TryItLinks() {
   return (
-    <div id="how-to-try-it" className="grid gap-4 sm:grid-cols-3">
+    <div id="how-to-try-it" className="grid gap-4 sm:grid-cols-2">
       {links.map((link) => (
         <a
           key={link.href}
